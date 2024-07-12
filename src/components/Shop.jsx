@@ -1,3 +1,6 @@
+import { PRODUCTS } from "../product"
+import Product from "./Product"
+import "./shop.css";
 
 const Shop = () => {
   return (
@@ -5,8 +8,9 @@ const Shop = () => {
       <div className="shopTitle">
         <h1> Shopping Store </h1>
       </div>
-      <div className="products"> 
-      </div>
+      <div className="products"> { PRODUCTS.map((product)=>(
+        <Product data= {product}/>
+      ))} </div>
     </div>
   )
 }
