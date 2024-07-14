@@ -90,3 +90,113 @@ form button:hover {
   width: 100%;
   padding: 20px;
 }
+
+/* Styling for the shop */
+.shopTitle {
+  margin-top: 100px;
+  text-align: center;
+  font-size: 40px;
+}
+
+.products {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  padding: 20px;
+}
+
+.product {
+  border-radius: 15px;
+  width: 300px;
+  height: auto;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 15px;
+}
+
+.product .description {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.product:hover {
+  transition: 0.3s ease-in;
+  cursor: pointer;
+  transform: translateY(-10px);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.addToCartBttn {
+  background-color: transparent;
+  border: 2px solid #333;
+  min-width: 100px;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.addToCartBttn:hover {
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+}
+
+/* Styling for the product reviews */
+.product-reviews {
+  margin-top: 20px;
+}
+
+.review-form, .review-list {
+  margin: 20px 0;
+}
+
+.review-form label {
+  display: block;
+  margin-top: 10px;
+}
+
+.review-form input, .review-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.review-form button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.review-form button:hover {
+  background-color: #0056b3;
+}
+
+.review {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-top: 10px;
+}
