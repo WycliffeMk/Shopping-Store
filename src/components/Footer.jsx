@@ -33,10 +33,12 @@ const Footer = () => {
           {/* Section for company links */}
           <div className="sb_footer-links_div">
             <h4>Company</h4>
-            <a href="https://taleist.agency/about-us-pages/small-business/"><p>About</p></a>
-            <a href="https://www.munro.agency/small-business-press-release-guide/"><p>Press</p></a>
-            <a href="https://carrerstore.com"><p>Careers</p></a>
-            <a href="https://www.un.org/en/contact-us-0"><p>Contact</p></a>
+            <li>About</li>
+            <p>a small business started at the year 2024 july 13 midnight</p>
+            <li>Careers</li>
+            <p>Discover rewarding career opportunities at shopping store, where innovation meets growth in a dynamic small business environment.</p>
+            <li>Contact</li>
+            <p>Email: spainwins@gmail.com</p>
           </div>
           {/* Placeholder section for future content */}
           <div className="sb_footer-links_div">
