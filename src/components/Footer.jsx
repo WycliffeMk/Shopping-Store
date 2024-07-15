@@ -1,8 +1,8 @@
 import './footer.css'; // Importing the CSS file for styling
-import { FaSquareFacebook } from "react-icons/fa6";
-import { FaLinkedin } from "react-icons/fa";
-import { FaTwitterSquare } from "react-icons/fa";
-import { FaSquareInstagram } from "react-icons/fa6";
+import { FaTelegram } from "react-icons/fa6";
+import { MdOutlineLocalPhone } from "react-icons/md";
+import { MdOutlineMapsHomeWork } from "react-icons/md";
+import { AiOutlineMail } from "react-icons/ai";
 
 const Footer = () => {
   return (
@@ -14,43 +14,40 @@ const Footer = () => {
           {/* Section for business links */}
           <div className="sb_footer-links_div">
             <h4>For business</h4>
-            <a href="https://www.alibaba.com/trade/search?spm=a2700.7735675.the-new-header_fy23_pc_search_bar.keydown__Enter&tab=all&SearchText=men"><p>Men</p></a>
-            <a href="https://www.alibaba.com/trade/search?spm=a2700.galleryofferlist.the-new-header_fy23_pc_search_bar.keydown__Enter&tab=all&SearchText=women"><p>Women</p></a>
-            <a href="https://alibaba.com/trade/search?spm=a2700.galleryofferlist.the-new-header_fy23_pc_search_bar.keydown__Enter&tab=all&SearchText=child"><p>children</p></a>
+            <p>Men</p>
+            <p>Women</p>
+            <p>Children</p>
           </div>
           {/* Section for resource links */}
           <div className="sb_footer-links_div">
             <h4>Resource</h4>
-            <a href="https://globalinclusivegrowthsummit.com/summit/2024/agenda/morning-plenary/critical-capital-closing-the-160-trillion-womens-wealth-gap/?utm_source=SEM&utm_medium=Paid+ad&utm_id=GIGS-2024&utm_campaign=GIGS-2024&utm_term=supporting%20small%20business&gad_source=1&gclid=EAIaIQobChMIkPHY48SmhwMVJppoCR2xYwZEEAAYASAAEgIwBfD_BwE"><p>Resource center</p></a>
-            <a href="https://littlemediaagency.com/testimonials/"><p>Testimonials</p></a>
-            <a href="https://www.stvcommercial.tv/growthfund/"><p>STV</p></a>
+            <p>The Business was Marketing by Davis Burns & Mullet</p>
           </div>
           {/* Section for partner links */}
           <div className="sb_footer-links_div">
             <h4>Partners</h4>
-            <a href="https://www.wolfandco.com/cybersecurity-and-penetration-testing-services/?utm_source=google&utm_medium=cpc&utm_campaign=cybersecurity&gclid=EAIaIQobChMI5fqgr8WmhwMVRqaDBx2GyAZYEAAYAiAAEgKb6PD_BwE"><p>Swing Tech</p></a>
+            <p>Amazon</p>
           </div>
           {/* Section for company links */}
           <div className="sb_footer-links_div">
-            <h4>Company</h4>
-            <li>About</li>
-            <p>a small business started at the year 2024 july 13 midnight</p>
-            <li>Careers</li>
-            <p>Discover rewarding career opportunities at shopping store, where innovation meets growth in a dynamic small business environment.</p>
-            <li>Contact</li>
-            <p>Email: spainwins@gmail.com</p>
+            <h4>Service</h4>
+            <p>Marketing.</p>
+            <p>Development</p>
+            <p>Consulting.</p>
+            <p>Shipping</p>
           </div>
           {/* Placeholder section for future content */}
           <div className="sb_footer-links_div">
-            <h4>Coming soon on</h4>
+            <h4>Coming soon</h4>
             {/* Add content here as needed */}
           </div>
           {/* Social media icons section */}
           <div className="socialmedia">
-           <a href="https://www.facebook.com/marketplace/category/apparel/"><FaSquareFacebook /> Facebook</a>
-           <a href="https://www.linkedin.com/company/clothing-shop-online"><FaLinkedin /> Linkedin</a>
-           <a href="https://x.com/fashion?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><FaTwitterSquare /> Twitter</a>
-           <a href="https://www.instagram.com/explore/tags/clothingbrand/?hl=en"><FaSquareInstagram /> Instagram</a>
+            <h4>Contact info</h4>
+          <p><MdOutlineMapsHomeWork /> Kilimani.</p>
+          <p><MdOutlineLocalPhone /> +254734543234.</p>
+          <p><AiOutlineMail /> Sstore@gmail.com</p>
+          <p><FaTelegram /> Sstore,Nairobi</p>
           </div>
         </div>
       </div>
@@ -60,13 +57,6 @@ const Footer = () => {
         <div className="sb_footer-copyright">
           {/* Copyright notice with dynamic year */}
           <p>&copy;{new Date().getFullYear()} codeInn. All rights reserved.</p>
-        </div>
-        {/* Links to legal pages */}
-        <div className="footer-below-links">
-          <a href="https://www.backhouse-solicitors.co.uk/business-law/glossary-of-corporate-law-terms/"><div><p>Terms & Conditions</p></div></a>
-          <a href="https://policies.google.com/privacy?hl=en-US"><div><p>Privacy Policy</p></div></a>
-          <a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=GRFTMVHP4HXMESSP"><div><p>Security</p></div></a>
-          <a href="https://www.cookieyes.com/blog/internet-cookies/"><div><p>Cookies</p></div></a>
         </div>
       </div>
     </div>

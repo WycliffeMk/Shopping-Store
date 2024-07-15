@@ -1,8 +1,8 @@
 .section_padding{
-    padding: 4rem 4rem;
+    padding: 1rem 1rem;
 }
 .footer{
-    background-color: #2d2d32;
+    background-color: #165852;
 }
 .sb_footer{
     display: flex;
@@ -16,10 +16,10 @@
     flex-wrap: wrap;
     width: 100%;
     text-align: left;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 .sb_footer-links div{
-    width: 150px;
+    width: 200px;
     margin: 1rem;
     display: flex;
     justify-content: flex-start;
@@ -34,15 +34,15 @@ a{
     display: flex;
     flex-direction: column;
     cursor: pointer;
-
 }
 .sb_footer-links div h4{
     font-size: 14px;
     line-height: 17px;
     margin-bottom: 0.9rem;
+    color: black;
 }
 .sb_footer-links div a{
-    font-size: 12px;
+    font-size: 10px;
     line-height: 15px;
     margin: 0.5rem 0;
     cursor: pointer;
@@ -53,60 +53,20 @@ a{
     justify-content: space-between;
     margin-top: 0.2rem;
 }
-.sb_footer-below-links{
-    display: flex;
-    flex-direction: row;
-}
-.sb_footer-below-links p{
-    font-size: 13px;
-    line-height: 15px;
-    margin-left: 2rem;
-    color: white;
-    font-weight: 600;
-}
 hr{
     color: white !important;
     width: 100%;
+    border: 2px red;
 }
 .sb_footer-copyright{
    font-size: 13px;
    line-height: 15px;
    color: white;
    font-weight: 600;
+   background-color: rgb(107, 15, 15);
+   text-align: center;
+   padding: 10px;
 }
-@media screen and (max-width: 850px) {
-    .sb_footer-heading h1{
-        font-size: 44px;
-        line-height: 50px;
-    }
-}
-@media screen and (max-width: 550px) {
-    .sb_footer-heading h1{
-        font-size: 30px;
-        line-height: 35px;
-    }
-    .sb_footer-links div{
-        margin: 1rem;
-    }
-    .sb_footer-btn p{
-        font-size: 14px;
-        line-height: 20px;
-    }
-    .sb_footer-below{
-        flex-direction: column;
-        justify-content: left;
-    }
-    .sb_footer-below-links{
-        flex-direction: column;
-    }
-    .sb_footer-below-links p{
-        margin-left: 0rem;
-        margin-top: 1rem;
-    }
-}
-@media screen and (max-width: 4000px){
-      .sb_footer-heading h1{
-        font-size: 27px;
-        line-height: 38px;
-      }
+.sb_footer-links_div p{
+    color: rgb(37, 30, 30);
 }
