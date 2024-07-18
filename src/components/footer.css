@@ -2,7 +2,7 @@
     padding: 1rem 1rem;
 }
 .footer{
-    background-color: #165852;
+    background-color: rgb(39, 38, 38);
 }
 .sb_footer{
     display: flex;
@@ -63,10 +63,10 @@ hr{
    line-height: 15px;
    color: white;
    font-weight: 600;
-   background-color: rgb(107, 15, 15);
+   background-color:black;
    text-align: center;
    padding: 10px;
 }
 .sb_footer-links_div p{
-    color: rgb(37, 30, 30);
+    color: rgb(54, 51, 51);
 }
