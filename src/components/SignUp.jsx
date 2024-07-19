@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 
 const SignUp = () => {
     const [formData, setFormData] = useState({
@@ -13,17 +12,19 @@ const SignUp = () => {
 
     const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value });
 
-    const onSubmit = async e => {
+    const onSubmit = e => {
         e.preventDefault();
         if (password !== confirmPassword) {
             alert('Passwords do not match');
         } else {
-            try {
-                const response = await axios.post('http://localhost:5000/api/auth/register', formData);
-                alert(response.data.message);
-            } catch (err) {
-                console.error(err);
-                alert('Error: ' + err.response.data.message);
+            const users = JSON.parse(localStorage.getItem('users')) || [];
+            const userExists = users.some(user => user.email === email);
+            if (userExists) {
+                alert('User already exists');
+            } else {
+                users.push({ username, email, password });
+                localStorage.setItem('users', JSON.stringify(users));
+                alert('User registered successfully');
             }
         }
     };

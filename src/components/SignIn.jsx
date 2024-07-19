@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 
 const SignIn = () => {
     const [formData, setFormData] = useState({
@@ -11,14 +10,14 @@ const SignIn = () => {
 
     const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value });
 
-    const onSubmit = async e => {
+    const onSubmit = e => {
         e.preventDefault();
-        try {
-            const response = await axios.post('http://localhost:5000/api/auth/login', formData);
-            alert(response.data.message);
-        } catch (err) {
-            console.error(err);
-            alert('Error: ' + err.response.data.message);
+        const users = JSON.parse(localStorage.getItem('users')) || [];
+        const user = users.find(user => user.email === email && user.password === password);
+        if (user) {
+            alert('Login successful');
+        } else {
+            alert('Invalid credentials');
         }
     };
 
