@@ -1,0 +1,32 @@
+
+.footer{
+    background-color: rgb(43, 41, 41);
+    width: 100%;
+    margin-top: auto;
+    color: gray;
+  }
+  .sb_footer-links{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  .footer-below{
+    text-align: center;
+    color: gray;
+    margin-top: 20px;
+  
+  }
+  .sb_footer{
+    justify-content: space-evenly;
+  
+  }
+  .sb_footer p{
+    display: block;
+    align-content: space-evenly;
+    
+    
+  
+  }
+  .sb_footer2{
+    width: 350px;
+  }

@@ -7,6 +7,7 @@ import Cart from "./components/Cart";
 import SignUp from "./components/SignUp";
 import SignIn from "./components/SignIn";
 import ShopContextProvider from "./context/shop-context.jsx";
+import Footer from "./components/Footer.jsx";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route path="/signup" element={<SignUp />} />
             <Route path="/signin" element={<SignIn />} />
           </Routes>
+          <Footer />
         </Router>
       </ShopContextProvider>
     </div>
