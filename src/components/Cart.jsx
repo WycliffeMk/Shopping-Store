@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import axios from "axios";
 import { PRODUCTS } from "../product";
 import { ShopContext } from "../../src/context/shop-context";
 import { CartItem } from "./Cart-item";
@@ -11,6 +12,24 @@ const Cart = () => {
   const totalAmount = getTotalCartAmount();
 
   const navigate = useNavigate();
+
+  const handleCheckout = async () => {
+    try {
+      const userId = 1; // Replace with actual user ID from context
+      const cartItems = cartItems; 
+      const response = await axios.post('/checkout', { user_id: userId });
+      if (response.status === 200) {
+        clearCart(); 
+        alert('Checkout successful');
+        navigate('/'); 
+      }
+    } catch (error) {
+      console.error('Checkout failed', error);
+      alert('Checkout failed');
+    }
+  };
+
+
   return (
     <div className="cart">
       <div>
@@ -28,7 +47,7 @@ const Cart = () => {
           {totalAmount > 0}
           <p> Subtotal: ${totalAmount} </p>
           <button onClick={() => navigate("/")}> Continue Shopping</button>
-          <button> Checkout</button>
+          <button onClick={handleCheckout}> Checkout</button>
         </div>
       ) : (
         <h1> Your Cart is Empty </h1>
