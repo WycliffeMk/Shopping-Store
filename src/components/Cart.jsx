@@ -15,7 +15,7 @@ const Cart = () => {
 
   const handleCheckout = async () => {
     try {
-      const userId = 1; // Replace with actual user ID from context
+      const userId = 1; 
       const cartItems = cartItems; 
       const response = await axios.post('/checkout', { user_id: userId });
       if (response.status === 200) {
