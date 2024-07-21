@@ -19,7 +19,7 @@ const Footer = () => {
           </div>
           <div className="sb_footer">
           <h4>Resource</h4>
-          <p  className='sb_footer2'>The Business was Marketing by Davis Burns & Mullet</p>
+          <p  className='sb_footer2'>The Business is Marketed by Eric Omodi and Ayub</p>
           </div>
           <div className="sb_footer">
             <h4>Service</h4>
