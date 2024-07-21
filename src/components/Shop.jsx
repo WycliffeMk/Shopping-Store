@@ -2,7 +2,7 @@ import React from 'react';
 import { PRODUCTS } from "../product";
 import Product from "./Product";
 import "./shop.css";
-import withAuth from './withAuth'; // Ensure this path is correct
+import withAuth from './withAuth'; 
 
 const Shop = () => {
     return (
@@ -19,4 +19,4 @@ const Shop = () => {
     );
 };
 
-export default withAuth(Shop); // Wrap Shop component with HOC
+export default withAuth(Shop); 
