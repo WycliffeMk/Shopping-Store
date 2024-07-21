@@ -27,7 +27,7 @@ const SignUp = () => {
                 users.push({ username, email, password });
                 localStorage.setItem('users', JSON.stringify(users));
                 alert('User registered successfully');
-                navigate('/shop');  // Redirect to the shop page
+                navigate('/shop');  
             }
         }
     };
