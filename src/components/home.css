@@ -97,4 +97,19 @@
   .home-stats-text {
     font-weight: 600;
   }
+  .logout-button {
+    background-color: #746e6f;
+    color: rgb(7, 1, 1);
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    border-radius: 10%;
+    font-weight: 400;
+  }
+  
+  .logout-button:hover {
+    background-color: #c82333;
+  }
   
