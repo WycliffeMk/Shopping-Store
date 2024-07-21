@@ -3,7 +3,7 @@ import { Navigate } from 'react-router-dom';
 
 const withAuth = (WrappedComponent) => {
     return (props) => {
-        // Check authentication status
+        // Check if the user is authenticated
         const isAuthenticated = localStorage.getItem('isLoggedIn') === 'true';
 
         return isAuthenticated ? <WrappedComponent {...props} /> : <Navigate to="/signin" />;
