@@ -4,20 +4,18 @@ import { PRODUCTS } from "../product";
 import { ShopContext } from "../../src/context/shop-context";
 import { CartItem } from "./Cart-item";
 import "./Cart.css";
-
 import { useNavigate } from "react-router-dom";
+import { FaShoppingCart } from "react-icons/fa";
 
 const Cart = () => {
-  const { cartItems, getTotalCartAmount } = useContext(ShopContext);
+  const { cartItems, getTotalCartAmount, clearCart } = useContext(ShopContext);
   const totalAmount = getTotalCartAmount();
-
   const navigate = useNavigate();
 
   const handleCheckout = async () => {
     try {
-      const userId = 1; // Replace with actual user ID from context
-      const cartItems = cartItems; 
-      const response = await axios.post('/checkout', { user_id: userId });
+      const userId = 1; 
+      const response = await axios.post('/checkout', { user_id: userId, cartItems });
       if (response.status === 200) {
         clearCart(); 
         alert('Checkout successful');
@@ -29,28 +27,32 @@ const Cart = () => {
     }
   };
 
+  const totalCartItems = Object.values(cartItems).reduce((acc, curr) => acc + curr, 0);
 
   return (
     <div className="cart">
-      <div>
-        <h1> Your Cart Items</h1>
+      <div className="cart-header">
+        <h1>Your Cart Items</h1>
+        <div className="cart-icon">
+          <FaShoppingCart />
+          <span className="cart-count">{totalCartItems}</span>
+        </div>
       </div>
       <div className="cartItems">
         {PRODUCTS.map((product) => {
           if (cartItems[product.id] !== 0) {
-            return <CartItem data={product} />;
+            return <CartItem key={product.id} data={product} />;
           }
         })}
       </div>
       {totalAmount > 0 ? (
         <div className="checkOut">
-          {totalAmount > 0}
-          <p> Subtotal: ${totalAmount} </p>
-          <button onClick={() => navigate("/")}> Continue Shopping</button>
-          <button onClick={handleCheckout}> Checkout</button>
+          <p>Subtotal: ${totalAmount}</p>
+          <button onClick={() => navigate("/shop")}>Continue Shopping</button>
+          <button onClick={handleCheckout}>Checkout</button>
         </div>
       ) : (
-        <h1> Your Cart is Empty </h1>
+        <h1>Your Cart is Empty</h1>
       )}
     </div>
   );
