@@ -26,8 +26,13 @@ const SignUp = () => {
             } else {
                 users.push({ username, email, password });
                 localStorage.setItem('users', JSON.stringify(users));
-                alert('User registered successfully. Please log in.');
-                navigate('/signin');  // Redirect to the login page
+// <<<<<<< ayub
+//                 alert('User registered successfully. Please log in.');
+//                 navigate('/signin');  // Redirect to the login page
+// =======
+//                 alert('User registered successfully');
+//                 navigate('/shop');  
+// >>>>>>> main
             }
         }
     };
