@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const Login = () => {
+const Login = ({ onLogin }) => {
     const [formData, setFormData] = useState({
         email: '',
         password: ''
@@ -18,6 +18,8 @@ const Login = () => {
         const user = users.find(user => user.email === email && user.password === password);
         if (user) {
             alert('Login successful');
+            localStorage.setItem('isLoggedIn', 'true'); // Set login state
+            onLogin(); // Call the function passed from App to update login state
             navigate('/shop'); // Redirect to the shop page
         } else {
             alert('Invalid credentials');
